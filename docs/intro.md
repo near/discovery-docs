@@ -2,46 +2,38 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Near Social
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Near Social** (previously known as **Social08**) is a social data protocol built on top of NEAR Protocol.
 
-## Getting Started
+Please join [Telegram group @NearSocial](https://t.me/NearSocial) for discussions.
 
-Get started by **creating a new site**.
+Watch presentation [Near Social at NEARCON22](https://www.youtube.com/watch?v=Khn7zX7ZtqI&t=4700s)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Explore Near Social: **[near.social](https://near.social)**
 
-### What you'll need
+[The Past, The Present and The Future of NEAR Social](https://thewiki.near.page/PastPresentAndFutureOfNearSocial)
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Links
 
-## Generate a new site
+Github: https://github.com/NearSocial
 
-Generate a new Docusaurus site using the **classic template**.
+Twitter: [@NearSocial_](https://twitter.com/NearSocial_)
 
-The classic template will automatically be added to your project after you run the command:
+Telegram: [@NearSocial](https://t.me/NearSocial)
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+SocialDB Contract:
+- Source: https://github.com/NearSocial/social-db
+- Mainnet: `social.near`
+- Testnet: `v1.social08.testnet`
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Standards: https://github.com/NearSocial/standards
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Near Social Browser:
+- Source: https://github.com/NearSocial/viewer
+- Mainnet: https://near.social/
+- Testnet: https://test.near.social/
 
-## Start your site
+If you are looking for a mastodon based social network for `.near` users, see an article about [mastodon.near.social](#)
 
-Run the development server:
 
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
