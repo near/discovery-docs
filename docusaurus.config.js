@@ -55,7 +55,7 @@ const config = {
         indexPages: false,
         indexBlog: false,
         docsRouteBasePath: ['/'],
-        docsDir: ["../docs"],
+        docsDir: ["./docs"],
         language: ["en"],
       },
     ],
@@ -65,10 +65,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'NEAR Social Docs',
+        title: 'Social Docs',
         logo: {
           alt: 'NEAR',
           src: 'img/logo.svg',
+          srcDark: 'img/logo_dark.svg',
         },
         items: [
           {
