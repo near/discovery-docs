@@ -1,4 +1,4 @@
-# Near Social VM APIs reference
+# VM APIs Reference
 
 Near Social VM provides a set of custom APIs that can be used by the widgets.
 

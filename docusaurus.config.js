@@ -76,6 +76,18 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
+            label: 'Documentation',
+          },
+          {
+            type: 'doc',
+            docId: 'vm-api',
+            position: 'left',
+            label: 'API',
+          },
+          {
+            type: 'doc',
+            docId: 'tutorial/index',
+            position: 'left',
             label: 'Tutorial',
           },
           {
@@ -92,8 +104,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'NEAR Social',
                 to: '/intro',
+              },
+              {
+                label: 'NEAR Docs',
+                href: 'https://docs.near.org',
               },
             ],
           },
@@ -102,11 +118,11 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/nearprotocol',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://near.chat',
               },
               {
                 label: 'Twitter',
