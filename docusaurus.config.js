@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: 'NEAR Social',
-                to: '/intro',
+                to: '/',
               },
               {
                 label: 'NEAR Docs',
