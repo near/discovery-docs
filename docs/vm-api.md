@@ -67,7 +67,7 @@ While the data is fetching the returned value equals to `null`.
 
 `Social.get` takes up to 3 arguments:
 
- | name      |  type     | data type               | description                                                           |
+ | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | None      |  **required** | object   | the path pattern(s)  |
  | None      |  _optional_ | object   | the block height or finality  |
