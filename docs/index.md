@@ -1,8 +1,9 @@
 ---
-sidebar_position: 1
+id: welcome
+title: Welcome to Discovery Docs
+sidebar_label: Home
+hide_table_of_contents: true
 ---
-
-# Near Social
 
 **Near Social** (previously known as **Social08**) is a social data protocol built on top of NEAR Protocol.
 
@@ -35,5 +36,4 @@ Near Social Browser:
 - Testnet: https://test.near.social/
 
 If you are looking for a mastodon based social network for `.near` users, see an article about [mastodon.near.social](#)
-
 

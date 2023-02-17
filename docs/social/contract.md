@@ -1,4 +1,9 @@
-# SocialDB
+---
+id: contract
+title: SocialDB
+sidebar_label: SocialDB
+hide_table_of_contents: true
+---
 
 > SocialDB is a smart contract to store social data on NEAR protocol.
 

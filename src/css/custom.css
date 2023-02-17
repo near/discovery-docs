@@ -28,3 +28,26 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+/* Menu markers */
+li hr {
+  height: 4px;
+  margin: 0.2em auto;
+  width: 90%;
+  border-width: 0;
+}
+
+[data-theme='light'] li hr {
+  background-color: #f8f8f8;
+}
+
+[data-theme='dark'] li hr {
+  background-color: #333;
+}
+
+.subsection {
+  width: 50%;
+  margin: 2.5em auto;
+  height: 0.5px;
+}
