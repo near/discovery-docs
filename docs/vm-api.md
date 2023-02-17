@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # VM APIs Reference
 
 Near Social VM provides a set of custom APIs that can be used by the widgets.
@@ -51,7 +54,71 @@ VM provides a convenient API to get data from the SocialDB contract. There are f
 - `Social.keys`
 - `Social.index`
 
-#### Social.get
+### Social.get
+
+This method fetches the data from the SocialDB contract by calling `get` and returns the data.
+If the path pattern is a single key, it will try to unwrap the object until the first wildcard.
+
+:::note
+While the data is fetching the returned value equals to `null`.
+:::
+
+#### Parameters
+
+`Social.get` takes up to 3 arguments:
+
+ | param      |  required     | type               | description                                                           |
+ |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+ | None      |  **required** | object   | the path pattern(s)  |
+ | None      |  _optional_ | object   | the block height or finality  |
+ | options   |  _optional_ | object   | the `options` object:<br/>- `subscribe` _(optional)_: if true, the data will be refreshed every 5 seconds.<br/>- `return_deleted` _(optional)_: whether to return deleted values (as `null`). Default is `false`.  |
+
+#### Response Examples
+
+For example, if the path pattern is `mob.near/widget/*`:
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+
+```js
+// add sample request code
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+{
+  "HelloWorld": "return <div>Hello, World!</div>;",
+  "HelloUsername": "return <div>Hello, {props.username}!</div>;"
+}
+```
+
+</TabItem>
+</Tabs>
+
+If the path pattern is `mob.near/widget/HelloWorld`:
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+
+```js
+// add sample request code
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+"return <div>Hello, World!</div>;"
+```
+
+</TabItem>
+</Tabs>
+
+---
 
 `Social.get` takes up to 3 arguments:
 - (required) the path pattern(s)
