@@ -1,7 +1,6 @@
 ---
 id: hello-account
 title: Hello, AccountId
-hide_table_of_contents: true
 ---
 
 Widget has access to the `context`. The context contains `accountId` if a user signed in to near.social website.

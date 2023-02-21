@@ -1,7 +1,6 @@
 ---
 id: tech
 title: Technical Documentation
-hide_table_of_contents: true
 ---
 
 This document goes into technical details of the Near Social.  

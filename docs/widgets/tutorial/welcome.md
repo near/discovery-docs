@@ -1,7 +1,6 @@
 ---
 id: welcome
 title: Welcome
-hide_table_of_contents: true
 ---
 
 This tutorial will teach you about widgets and the VM.

@@ -24,7 +24,7 @@ const sidebars = {
       "type": "html",
       "value": "<span class='menu__link'><b><small> NEAR Social </small></b></span>"
     },
-    'social/home',
+    'social/intro',
     'social/contract',
     'social/standards',
     'social/tech',

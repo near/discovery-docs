@@ -1,7 +1,6 @@
 ---
 id: standards
 title: Standards
-hide_table_of_contents: true
 ---
 
 The data in SocialDB is organized as a simple JSON tree.
