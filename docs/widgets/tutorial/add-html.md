@@ -1,4 +1,7 @@
-# Adding some HTML
+---
+id: add-html
+title: Adding Some HTML
+---
 
 We can add some HTML on top of the plain text we return. ReactJS has a lot of built-in HTML elements.
 For example, we can wrap our greetings into a header.

@@ -1,4 +1,7 @@
-# Technical Documentation
+---
+id: tech
+title: Technical Documentation
+---
 
 This document goes into technical details of the Near Social.  
 I recommend reading [The Past, Present, and Future of Near Social](https://thewiki.near.page/PastPresentAndFutureOfNearSocial) first.

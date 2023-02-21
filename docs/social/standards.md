@@ -1,4 +1,7 @@
-# Standards
+---
+id: standards
+title: Standards
+---
 
 The data in SocialDB is organized as a simple JSON tree.
 The only enforced rule is that the keys in the root are the account IDs that store the data.

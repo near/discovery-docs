@@ -1,4 +1,7 @@
-# Tutorial
+---
+id: welcome
+title: Welcome
+---
 
 This tutorial will teach you about widgets and the VM.
 It requires basic knowledge of [JavaScript](https://www.javascript.com/) and ideally knowledge of [ReactJS](https://reactjs.org/)

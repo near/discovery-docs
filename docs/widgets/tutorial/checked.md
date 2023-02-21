@@ -1,4 +1,7 @@
-# Checked Hello, AccountId!
+---
+id: checked
+title: Checked Hello, AccountId
+---
 
 We can add an if statement to check whether user is logged in, and if not exit early.
 

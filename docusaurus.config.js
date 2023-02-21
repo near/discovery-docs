@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'NEAR Social Docs',
+  title: 'NEAR Discovery Docs',
   tagline: 'Developer Documentation',
-  url: 'https://social.near-docs.io',
+  url: 'https://discovery.near-docs.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -65,28 +65,28 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Social Docs',
+        title: 'Discovery',
         logo: {
-          alt: 'NEAR',
+          alt: 'Discovery',
           src: 'img/logo.svg',
           srcDark: 'img/logo_dark.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'welcome',
             position: 'left',
             label: 'Documentation',
           },
           {
             type: 'doc',
-            docId: 'vm-api',
+            docId: 'api/home',
             position: 'left',
             label: 'API',
           },
           {
             type: 'doc',
-            docId: 'tutorial/index',
+            docId: 'widgets/tutorial/welcome',
             position: 'left',
             label: 'Tutorial',
           },
@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: 'NEAR Social',
-                to: '/intro',
+                to: '/',
               },
               {
                 label: 'NEAR Docs',

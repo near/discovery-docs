@@ -1,4 +1,7 @@
-# Hello, world!
+---
+id: hello-world
+title: Hello World
+---
 
 The simplest widget is a simple return statement.
 
