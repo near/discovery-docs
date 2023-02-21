@@ -2,8 +2,9 @@
 id: cache
 title: Cache API
 sidebar_label: Cache
-hide_table_of_contents: true
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Cache
 

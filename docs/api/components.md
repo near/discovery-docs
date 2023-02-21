@@ -2,8 +2,9 @@
 id: components
 title: Components API
 sidebar_label: Components
-hide_table_of_contents: true
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 Near Social VM provides the list of custom React components:
 - `Widget` - the widget embedding component.

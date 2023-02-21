@@ -54,14 +54,16 @@ const sidebars = {
       "value": "<span class='menu__link'><b><small> API Reference </small></b></span>"
     },
     'api/home',
-    'api/primitives',
-    'api/components',
-    'api/state',
-    'api/fetch',
-    'api/storage',
-    'api/near',
-    'api/social',
-    'api/cache',
+    {"API":[
+        'api/primitives',
+        'api/components',
+        'api/state',
+        'api/fetch',
+        'api/storage',
+        'api/near',
+        'api/social',
+        'api/cache',
+    ]},
   ],
 };
 

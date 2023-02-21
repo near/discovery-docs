@@ -2,16 +2,17 @@
 id: social
 title: Social API
 sidebar_label: Social
-hide_table_of_contents: true
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 VM provides a convenient API to get data from the SocialDB contract. There are four methods:
-- `Social.get`
-- `Social.getr`
-- `Social.keys`
-- `Social.index`
+- [`Social.get`](#socialget)
+- [`Social.getr`](#socialgetr)
+- [`Social.keys`](#socialkeys)
+- [`Social.index`](#socialindex)
 
-#### Social.get
+## Social.get
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
@@ -19,7 +20,7 @@ VM provides a convenient API to get data from the SocialDB contract. There are f
  | None      |  _optional_ | object   | the block height or finality  |
  | options   |  _optional_ | object   | the `options` object:<br/>- `subscribe` _(optional)_: if true, the data will be refreshed every 5 seconds.<br/>- `return_deleted` _(optional)_: whether to return deleted values (as `null`). Default is `false`.  |
 
-#### Response Examples
+### Response Examples
 
 For example, if the path pattern is `mob.near/widget/*`:
 
@@ -107,12 +108,12 @@ In general, the API server also serves data faster than the NEAR RPC, because it
 
 `Social.get` options are similar to the SocialDB's `get` API.
 
-#### Social.getr
+## Social.getr
 
 `Social.getr` is just a wrapper helper for `Social.get`, it appends `**` to each of the path pattern.
 For example, if the path pattern is `mob.near/profile`, `Social.getr` will call `Social.get` with the path pattern `mob.near/profile/**`.
 
-#### Social.keys
+## Social.keys
 
 `Social.keys` takes up to 3 arguments:
 - (required) the path pattern(s)
@@ -134,7 +135,7 @@ const data = Social.keys(`${accountId}/post/meme`, "final", {
 });
 ```
 
-#### Social.index
+## Social.index
 
 `Social.index` arguments:
 - `action` is the `index_type` from the standard, e.g. in the path `index/like` the action is `like`.

@@ -2,8 +2,9 @@
 id: primitives
 title: Primitives API
 sidebar_label: Primitives
-hide_table_of_contents: true
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 Near Social VM provides a set of custom APIs that can be used by the widgets.
 

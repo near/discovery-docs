@@ -2,7 +2,6 @@
 id: home
 title: Discovery API
 sidebar_label: Home
-hide_table_of_contents: true
 ---
 
 Near Social VM provides a set of custom APIs that can be used by the widgets.
