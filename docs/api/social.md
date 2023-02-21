@@ -113,7 +113,15 @@ In general, the API server also serves data faster than the NEAR RPC, because it
 `Social.getr` is just a wrapper helper for `Social.get`, it appends `**` to each of the path pattern.
 For example, if the path pattern is `mob.near/profile`, `Social.getr` will call `Social.get` with the path pattern `mob.near/profile/**`.
 
+ | param      |  required     | type               | description                                                           |
+ |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+ | None      |  **required** | object   | the path pattern(s)  |
+
 ## Social.keys
+
+ | param      |  required     | type               | description                                                           |
+ |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+ | None      |  **required** | object   | the path pattern(s)  |
 
 `Social.keys` takes up to 3 arguments:
 - (required) the path pattern(s)
@@ -136,6 +144,10 @@ const data = Social.keys(`${accountId}/post/meme`, "final", {
 ```
 
 ## Social.index
+
+ | param      |  required     | type               | description                                                           |
+ |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
+ | None      |  **required** | object   | the path pattern(s)  |
 
 `Social.index` arguments:
 - `action` is the `index_type` from the standard, e.g. in the path `index/like` the action is `like`.
