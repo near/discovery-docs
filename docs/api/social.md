@@ -119,18 +119,13 @@ For example, if the path pattern is `mob.near/profile`, `Social.getr` will call 
 
 ## Social.keys
 
+`Social.keys` takes up to 3 arguments:
+
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | None      |  **required** | object   | the path pattern(s)  |
-
-`Social.keys` takes up to 3 arguments:
-- (required) the path pattern(s)
-- the block height or finality
-- (optional) the options object
-  - (optional) `subscribe` - if true, the data will be refreshed every 5 seconds.
-  - (optional) `return_type` - either `"History"`, `"True"`, or `"BlockHeight"`. If not specified, it will return the `"True"`.
-  - (optional) `return_deleted` - whether to return deleted values (as `null`). Default is `false`.
-  - (optional) `values_only` - whether to return only values (don't include objects). Default is `false`.
+ | None      |  _optional_ | object   | the block height or finality  |
+ | options   |  _optional_ | object   | the `options` object:<br/>- `subscribe` _(optional)_: if true, the data will be refreshed every 5 seconds.<br/>- `return_type` _(optional)_: either `"History"`, `"True"`, or `"BlockHeight"`. If not specified, it will return the `"True"`.<br/>- `return_deleted` _(optional)_: whether to return deleted values (as `null`). Default is `false`.<br/>- `values_only` _(optional)_: whether to return only values (don't include objects). Default is `false`.  |
 
 It calls the SocialDB's `keys` API and returns the data. While the data is fetching the returned value equals to `null`.
 The keys contract doesn't unwrap the object, so the returned data is the same as the SocialDB's `keys` API.
