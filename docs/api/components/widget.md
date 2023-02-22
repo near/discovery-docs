@@ -1,5 +1,5 @@
 ---
-id: Widget
+id: widget
 title: Widget Component
 sidebar_label: Widget
 ---

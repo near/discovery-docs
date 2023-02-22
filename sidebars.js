@@ -64,6 +64,12 @@ const sidebars = {
         'api/state',
         'api/storage',
     ]},
+    {"Components":[
+        'api/components',
+        'api/components/widget',
+        'api/components/markdown',
+        'api/components/ipfs',
+    ]},
   ],
 };
 

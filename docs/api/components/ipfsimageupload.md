@@ -1,6 +1,6 @@
 ---
 id: ipfs
-title: IpfsImageUpload
+title: IPFS Image Upload
 sidebar_label: IpfsImageUpload
 ---
 
