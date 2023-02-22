@@ -56,7 +56,6 @@ const sidebars = {
     'api/home',
     {"API":[
         'api/cache',
-        'api/components',
         'api/fetch',
         'api/near',
         'api/primitives',
