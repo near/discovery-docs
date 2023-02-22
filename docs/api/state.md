@@ -18,7 +18,9 @@ VM provides a convenient API to update the state of the widget. There are two me
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | None      |  **required** | object   | the path pattern(s)  |
+ | `None`      |  **required** | object   | an initial state object for the widget  |
+
+---
 
 ## State.update
 
@@ -28,4 +30,4 @@ The state will be initialized with the given object if it's not initialized yet.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | None      |  **required** | object   | the path pattern(s)  |
+ | `None`      |  _optional_ | object   | an optional initial state object  |
