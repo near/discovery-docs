@@ -48,7 +48,7 @@ For example, if the path pattern is `mob.near/widget/*`, the `Social.get` will u
 
 
 ```js
-// add sample request code
+const data = Social.get("mob.near/widget/*");
 ```
 
 </TabItem>
@@ -72,7 +72,7 @@ If the path pattern is `mob.near/widget/HelloWorld`, the `Social.get` will unwra
 
 
 ```js
-// add sample request code
+const data = Social.get("mob.near/widget/HelloWorld");
 ```
 
 </TabItem>
@@ -93,11 +93,34 @@ It's helpful that you don't have to manually unwrap object.
 ## Social.getr
 
 `Social.getr` is just a wrapper helper for `Social.get`, it appends `**` to each of the path pattern.
-For example, if the path pattern is `mob.near/profile`, `Social.getr` will call `Social.get` with the path pattern `mob.near/profile/**`.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `None`      |  **required** | object   | the path pattern(s)  |
+
+
+### Examples
+
+For example, if the path pattern is `mob.near/profile`, `Social.getr` will call `Social.get` with the path pattern `mob.near/profile/**`.
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+
+```js
+const data = Social.getr("mob.near/profile");
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+"return <div>Hello, World!</div>;"
+```
+
+</TabItem>
+</Tabs>
+
 
 ---
 
@@ -121,11 +144,25 @@ It can be used for building a feed, where the values are overwritten.
 
 ### Examples
 
+<Tabs>
+<TabItem value="request" label="Request" default>
+
 ```js
 const data = Social.keys(`${accountId}/post/meme`, "final", {
   return_type: "History",
 });
 ```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+"return <div>Hello, World!</div>;"
+```
+
+</TabItem>
+</Tabs>
+
 
 ---
 
@@ -143,6 +180,28 @@ Returns the array of matched indexed values. Ordered by `blockHeight`.
 
 
 ### Examples
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+```jsx
+return Social.index("test", "test-key-2");
+```
+
+```jsx
+return Social.index("test", "test-key-2", {
+  accountId: "mob.near"
+});
+```
+
+```jsx
+return Social.index("test", "test-key-2", {
+  accountId: ["mob.near", "root.near"]
+});
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
 
 ```json
 [
@@ -164,18 +223,5 @@ Returns the array of matched indexed values. Ordered by `blockHeight`.
 ]
 ```
 
-```jsx
-return Social.index("test", "test-key-2");
-```
-
-```jsx
-return Social.index("test", "test-key-2", {
-  accountId: "mob.near"
-});
-```
-
-```jsx
-return Social.index("test", "test-key-2", {
-  accountId: ["mob.near", "root.near"]
-});
-```
+</TabItem>
+</Tabs>
