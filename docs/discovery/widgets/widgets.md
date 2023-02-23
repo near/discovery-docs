@@ -46,7 +46,7 @@ By default, the `widgets` have access to the [`Bootstrap`](https://getbootstrap.
 
 You can compose multiple `widgets`. This will allow you to create complex applications. 
 
-To import `widget`, you only need to know who created it (their NEAR username), and the name of the widget. Then, simply use the [`Widget`](./) component
+To import `widget`, you only need to know who created it (their NEAR username), and the name of the widget. Then, simply use the `Widget` component
 
 
 ```ts
@@ -94,4 +94,4 @@ Then simply paste it into your code.
 ---
 
 ## Open Source With Version Control
-The source code of every widget is openly stored in [SocialDB](../social/home.md). The owner of the widget can update the widget's code, and since SocialDB is stored on a blockchain, all the previous versions of the widget will remain available.
+The source code of every widget is openly stored in [SocialDB](../../social/home.md). The owner of the widget can update the widget's code, and since SocialDB is stored on a blockchain, all the previous versions of the widget will remain available.

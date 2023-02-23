@@ -3,7 +3,7 @@ id: home
 title: Introduction
 ---
 
-Discovery provides a complete API to allow you to interact with different blockchains, websites, and store data in a decentralized way. [`Widgets`](widgets-url)
+Discovery provides a complete API to allow your [components](../widgets/home.md) to interact with different blockchains, websites, and store data in a decentralized way.
 
 Custom objects:
 - `Social` - the SocialDB API.
@@ -33,15 +33,3 @@ Standard objects:
 Imported objects:
 - `Big` - the big number API from the `big.js` library.
 - `BN` - the big number API from the `bn.js` library.
-
-Near Social VM provides the list of custom React components:
-- `Widget` - the widget embedding component.
-- `CommitButton` - the commit button component.
-- `IpfsImageUpload` - the IPFS image upload component.
-- `Markdown` - the component to render Markdown based on npm package `react-markdown`.
-- `InfiniteScroll` - the component to render infinite scroll based on npm package `react-infinite-scroller`.
-- `Typeahead` - the component for text auto-complete and typeahead based on npm package `react-bootstrap-typeahead`.
-- `Files` - the component to input files with drag and drop support based on npm package `react-files`.
-- `OverlayTrigger` - the component to render Bootstrap's OverlayTrigger based on npm package `react-bootstrap`.
-- `Tooltip` - the component to render Bootstrap's tooltip based on npm package `react-bootstrap`.
-- `styled` - React's styled components
