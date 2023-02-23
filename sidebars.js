@@ -55,10 +55,12 @@ const sidebars = {
     },
     'tutorial/welcome',
     {
-      "Basics": ['tutorial/add-html',
-        'tutorial/checked',
+      "Basics": [
+        'tutorial/hello-world',
         'tutorial/hello-account',
-        'tutorial/hello-world']
+        'tutorial/checked',
+        'tutorial/add-html',
+      ]
     },
     {
       "type": "html",
