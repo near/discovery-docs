@@ -1,5 +1,5 @@
 ---
-id: overlaytrigger
+id: overlay-trigger
 title: OverlayTrigger
 sidebar_label: OverlayTrigger
 ---
