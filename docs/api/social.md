@@ -25,8 +25,8 @@ The method takes up to 3 arguments:
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  **required** | object   | the path pattern(s)  |
- | `None`      |  _optional_ | object   | the block height or finality  |
+ | `patterns`      |  **required** | string / string[]   | the path pattern(s)  |
+ | `finality`      |  _optional_ | `"final"` / number   | the block height or finality  |
  | `options`   |  _optional_ | object   | the `options` object:<br/>- `subscribe` _(optional)_: if true, the data will be refreshed every 5 seconds.<br/>- `return_deleted` _(optional)_: whether to return deleted values (as `null`). Default is `false`.  |
 
 The block height or finality can be used to get the data at a specific block height or finality.
@@ -96,7 +96,9 @@ It's helpful that you don't have to manually unwrap object.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  **required** | object   | the path pattern(s)  |
+ | `patterns`      |  **required** | string / string[]   | the path pattern(s)  |
+ | `finality`      |  _optional_ | `"final"` / number   | the block height or finality  |
+ | `options`   |  _optional_ | object   | the `options` object:<br/>- `subscribe` _(optional)_: if true, the data will be refreshed every 5 seconds.<br/>- `return_deleted` _(optional)_: whether to return deleted values (as `null`). Default is `false`.  |
 
 
 ### Examples
@@ -133,8 +135,8 @@ The keys contract doesn't unwrap the object, so the returned data is the same as
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  **required** | object   | the path pattern(s)  |
- | `None`      |  _optional_ | object   | the block height or finality  |
+ | `patterns`      |  **required** | string / string[]   | the path pattern(s)  |
+ | `finality`      |  _optional_ | `"final"` / number   | the block height or finality  |
  | `options`   |  _optional_ | object   | the `options` object:<br/>- `subscribe` _(optional)_: if true, the data will be refreshed every 5 seconds.<br/>- `return_type` _(optional)_: either `"History"`, `"True"`, or `"BlockHeight"`. If not specified, it will return the `"True"`.<br/>- `return_deleted` _(optional)_: whether to return deleted values (as `null`). Default is `false`.<br/>- `values_only` _(optional)_: whether to return only values (don't include objects). Default is `false`.  |
 
 :::tip
@@ -174,8 +176,8 @@ Returns the array of matched indexed values. Ordered by `blockHeight`.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `action`      |  **required** | object   | is the `index_type` from the standard, e.g. in the path `index/like` the action is `like`.  |
- | `key`      |  **required** | object   | is the inner indexed value from the standard.  |
+ | `action`      |  **required** | string   | is the `index_type` from the standard, e.g. in the path `index/like` the action is `like`.  |
+ | `key`      |  **required** | string   | is the inner indexed value from the standard.  |
  | `options`   |  _optional_ | object   | the `options` object:<br/>- `accountId` _(optional)_: If given, it should either be a string or an array of account IDs to filter values by them. Otherwise, not filters by account Id.<br/>- `order` _(optional)_: Either `asc` or `desc`. Defaults to `asc`.<br/>- `limit` _(optional)_: Defaults to `100`. The number of values to return. Index may return more than index values, if the last elements have the same block height.<br/>- `from` _(optional)_: Defaults to `0` or `Max` depending on order.  |
 
 
