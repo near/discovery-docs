@@ -68,6 +68,7 @@ const sidebars = {
         'api/components/widget',
         'api/components/markdown',
         'api/components/ipfs',
+        'api/components/overlay-trigger',
     ]},
   ],
 };
