@@ -29,6 +29,15 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+article {
+  margin: .5em;
+}
+
+article img{
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+}
 
 /* Menu markers */
 li hr {
@@ -50,4 +59,47 @@ li hr {
   width: 50%;
   margin: 2.5em auto;
   height: 0.5px;
+}
+
+/* Feature list */
+.features a[href^="http"]::after {
+  content: "";
+}
+
+hr {
+  height: 1px;
+  border-radius: 0;
+  margin: 3.5em 0;
+}
+
+.avatar {
+  color: var(--ifm-font-color-base)
+}
+
+.avatar img {
+  border-radius: 0%;
+  display: block;
+  height: var(--ifm-avatar-photo-size);
+  overflow: hidden;
+  width: var(--ifm-avatar-photo-size);
+}
+
+.avatar__photo {
+  border-radius: 0%;
+}
+
+.navigate_title{
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2.5rem;
+}
+
+/* for image caption */
+img+em,
+.tabs-container+p em {
+    font-style: normal;
+    display: inherit;
+    text-align: center;
+    font-size: 90%;
+    margin: 0.5em 0 0 0;
 }

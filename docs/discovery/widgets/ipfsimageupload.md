@@ -1,10 +1,9 @@
 ---
 id: ipfs
-title: IPFS Image Upload
-sidebar_label: IpfsImageUpload
+title: Image Uploader
 ---
 
-`IpfsImageUpload` is a built-in special component of the Near Social VM, which enables users to create a `button` that will allow users to directly upload an image to ipfs and return a `CID` identifier (a special string used to identify some information stored in `IPFS`). Here is an example found in `near.social` by `mob.near` ( https://near.social/#/mob.near/widget/WidgetSource?src=mob.near/widget/IpfsImageUploadDemo)
+The `IpfsImageUpload` is a built-in component that enables users to directly upload an image to the InterPlanetary File System (IPFS). Here is an example found in `near.social` by `mob.near` ( https://near.social/#/mob.near/widget/WidgetSource?src=mob.near/widget/IpfsImageUploadDemo)
 
 ```javascript
 initState({
