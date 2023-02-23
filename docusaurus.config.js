@@ -80,13 +80,13 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'api/home',
+            docId: 'discovery/api/home',
             position: 'left',
             label: 'API',
           },
           {
             type: 'doc',
-            docId: 'widgets/tutorial/welcome',
+            docId: 'tutorial/welcome',
             position: 'left',
             label: 'Tutorial',
           },
