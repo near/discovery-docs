@@ -56,13 +56,18 @@ const sidebars = {
     'api/home',
     {"API":[
         'api/cache',
-        'api/components',
         'api/fetch',
         'api/near',
         'api/primitives',
         'api/social',
         'api/state',
         'api/storage',
+    ]},
+    {"Components":[
+        'api/components',
+        'api/components/widget',
+        'api/components/markdown',
+        'api/components/ipfs',
     ]},
   ],
 };

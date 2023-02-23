@@ -17,16 +17,20 @@ VM provides a convenient API to interact with the NEAR blockchain. There are thr
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | None      |  **required** | object   | the path pattern(s)  |
+ | `None`      |  **required** | object   | the path pattern(s)  |
+
+---
 
 ## Near.call
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | None      |  **required** | object   | the path pattern(s)  |
+ | `None`      |  **required** | object   | the path pattern(s)  |
+
+---
 
 ## Near.view
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | None      |  **required** | object   | the path pattern(s)  |
+ | `None`      |  **required** | object   | the path pattern(s)  |
