@@ -12,6 +12,8 @@ VM provides a convenient API to update the state of the widget. There are two me
 - [`State.init`](#stateinit)
 - [`State.update`](#stateupdate)
 
+---
+
 ## State.init
 
 `State.init` takes an object as an argument and initializes the state of the widget with this object. It'll be no-op if the state is already initialized.
@@ -20,7 +22,13 @@ VM provides a convenient API to update the state of the widget. There are two me
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `None`      |  **required** | object   | an initial state object for the widget  |
 
----
+### `State.init()` Implementation Details
+
+The state object is both stored in the `state` property of the widget virtual machine and in the `state` property of the react component. The state is initialized with the given object.
+
+```js reference title="VM.js"
+https://github.com/NearSocial/VM/blob/5b68433497272c23bf7d06a992c3209f3c97a2b5/src/lib/vm/vm.js#L754-L773
+```
 
 ## State.update
 
@@ -31,3 +39,11 @@ The state will be initialized with the given object if it's not initialized yet.
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `None`      |  _optional_ | object   | an optional initial state object  |
+
+### `State.update()` Implementation Details
+
+The state is stored in the `state` property of the widget. The state is initialized with an empty object `{}`. `Object.assign` is used to update the state.
+
+```js reference title="VM.js"
+https://github.com/NearSocial/VM/blob/5b68433497272c23bf7d06a992c3209f3c97a2b5/src/lib/vm/vm.js#L774-L786
+```
