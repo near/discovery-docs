@@ -24,13 +24,26 @@ VM provides a convenient API to update the state of the widget. There are two me
 
 ### `State.init()` Example
 
+<Tabs>
+<TabItem value="request" label="Request" default>
+
 ```js
-const variable = "Hello World!";
+const strVar = "Hello World!";
 State.init({
-  count: 0,
-  variable
+  numVar: 0,
+  strVar
 });
 ```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```js
+{ numVar: 0, strVar: "Hello World!" }
+```
+
+</TabItem>
+</Tabs>
 
 ### `State.init()` Implementation Details
 
@@ -55,13 +68,25 @@ The state will be initialized with the given object if it's not initialized yet.
 
 ### `State.update()` Example
 
+<Tabs>
+<TabItem value="request" label="Request" default>
+
 ```js
-const variable = "Hello World!";
 State.update({
-  count: 1,
-  variable
+  numVar: 1,
+  strVar: "Hello there!"
 });
 ```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```js
+{ numVar: 1, strVar: "Hello there!" }
+```
+
+</TabItem>
+</Tabs>
 
 ### `State.update()` Implementation Details
 
