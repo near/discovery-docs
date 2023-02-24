@@ -92,7 +92,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/near/social-docs',
+            href: 'https://github.com/nearsocial',
             label: 'GitHub',
             position: 'right',
           },
