@@ -25,7 +25,11 @@ VM provides a convenient API to interact with the NEAR blockchain. There are thr
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  **required** | object   | the path pattern(s)  |
+ | `contractName`      |  **required** | string   | the path pattern(s)  |
+ | `methodName`      |  **required** | string   | the path pattern(s)  |
+ | `args`      |  _optional_ | Record<string, any>   | the path pattern(s)  |
+ | `gas`      |  _optional_ | string / number   | the path pattern(s)  |
+ | `deposit`      |  _optional_ | string / number   | the path pattern(s)  |
 
 ---
 
@@ -33,4 +37,8 @@ VM provides a convenient API to interact with the NEAR blockchain. There are thr
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  **required** | object   | the path pattern(s)  |
+ | `contractName`      |  **required** | string   | the path pattern(s)  |
+ | `methodName`      |  **required** | string   | the path pattern(s)  |
+ | `args`      |  **required** | Record<string, any>   | the path pattern(s)  |
+ | `finality`      |  **required** | `"final"` / number   | the path pattern(s)  |
+ | `subscribe`      |  **required** | boolean   | the path pattern(s)  |

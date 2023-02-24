@@ -20,7 +20,7 @@ VM provides a convenient API to update the state of the widget. There are two me
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  **required** | object   | an initial state object for the widget  |
+ | `state`      |  **required** | object   | an initial state object for the widget  |
 
 ### `State.init()` Example
 
@@ -48,7 +48,8 @@ The state will be initialized with the given object if it's not initialized yet.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `None`      |  _optional_ | object   | an optional initial state object  |
+ | `state`      |  **required** | object   | the state  |
+ | `init`      |  _optional_ | object   | an optional initial state object  |
 
 ### `State.update()` Example
 
