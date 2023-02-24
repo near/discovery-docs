@@ -22,6 +22,16 @@ VM provides a convenient API to update the state of the widget. There are two me
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `None`      |  **required** | object   | an initial state object for the widget  |
 
+### `State.init()` Example
+
+```js
+const variable = "Hello World!";
+State.init({
+  count: 0,
+  variable
+});
+```
+
 ### `State.init()` Implementation Details
 
 The state object is both stored in the `state` property of the widget virtual machine and in the `state` property of the react component. The state is initialized with the given object.
@@ -39,6 +49,16 @@ The state will be initialized with the given object if it's not initialized yet.
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `None`      |  _optional_ | object   | an optional initial state object  |
+
+### `State.update()` Example
+
+```js
+const variable = "Hello World!";
+State.update({
+  count: 1,
+  variable
+});
+```
 
 ### `State.update()` Implementation Details
 
