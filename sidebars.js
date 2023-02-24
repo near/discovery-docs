@@ -73,12 +73,12 @@ const sidebars = {
     {
       "type": "link",
       "label": "Discovery CLI",
-      "href": "https://example.com"
+      "href": "https://github.com/FroVolod/near-social"
     },
     {
       "type": "link",
       "label": "VSCODE Extension",
-      "href": "https://example.com"
+      "href": "https://github.com/near/near-vscode"
     },
     {
       "type": "html",
