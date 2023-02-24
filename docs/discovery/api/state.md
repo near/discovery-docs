@@ -12,6 +12,28 @@ VM provides a convenient API to update the state of the widget. There are two me
 - [`State.init`](#stateinit)
 - [`State.update`](#stateupdate)
 
+:::note Accessing the State from the Component UI
+You may access state variables from the component UI using the `state` property of the `widget` object. For example, if you have a state variable `numVar` you can access it from the component UI using `state.numVar`. Here's an example of accessing a variable `profile` from the state and showing it conditionally on the component UI:
+
+```javascript
+return (
+  <div>
+  ...
+    {state.profile?.length > 0 && (
+      <div>
+        <p>Profiles:</p>
+        <ul>{state.profile}</ul>
+      </div>
+    )}
+  ...
+  </div>
+);
+```
+
+See this [full example on GitHub here](https://github.com/near/near-search/blob/main/widget/SearchBar.jsx).
+
+:::
+
 ---
 
 ## State.init
