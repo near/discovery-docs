@@ -40,6 +40,8 @@ The state object is both stored in the `state` property of the widget virtual ma
 https://github.com/NearSocial/VM/blob/5b68433497272c23bf7d06a992c3209f3c97a2b5/src/lib/vm/vm.js#L754-L773
 ```
 
+---
+
 ## State.update
 
 The `State.update` will trigger the state update, and the component will be re-rendered.
