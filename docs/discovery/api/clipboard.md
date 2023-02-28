@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 The VM implements caching layer for most network requests. You can leverage it manually by using `useCache` hook.
 
 
-But also for extra safety, the VM now has `isTrusted` as part of the stack. This allows, to verify if the action was part of the stack originating from the isTrusted user's event.
+But also for extra safety, the VM now has `isTrusted` as part of the stack. This allows, to verify if the action was part of the stack originating from the `isTrusted` user's event.
 
 
 ## writeText
@@ -23,7 +23,7 @@ The event requires for the page to be in transient state (explicit user's click)
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `text`      |  **required** | string   | a function that returns a promise, which generates data.  |
+ | `text`      |  **required** | string   | data to be copied to the clipboard.  |
 
 ### Examples
 
