@@ -6,10 +6,10 @@ title: Introduction
 Discovery provides a complete API to allow your [components](../widgets/home.md) to interact with different blockchains, websites, and store data in a decentralized way.
 
 Custom objects:
-- `Social` - the SocialDB API.
-- `State` - the state updates API.
-- `Near` - the NEAR API.
-- `clipboard` - the clipboard API. (similar to `navigator.clipboard`)
+- [`Social`](social.md) - the SocialDB API.
+- [`State`](state.md) - the state updates API.
+- [`Near`](near.md) - the NEAR API.
+- [`Clipboard`](clipboard.md) - the clipboard API.
 
 Standard objects:
 - `JSON` - the JSON API.
