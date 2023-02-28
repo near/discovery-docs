@@ -21,6 +21,6 @@ Discovery readily provides a set of widgets so you can readily start building yo
 - **[OverlayTrigger](./overlayTrigger.md)**: Renders Bootstrap's OverlayTrigger based on npm package [`react-bootstrap`](https://www.npmjs.com/package/react-bootstrap).
 - `InfiniteScroll` - the component to render infinite scroll based on npm package [`react-infinite-scroller`](https://www.npmjs.com/package/react-infinite-scroller).
 - `Typeahead` - the component for text auto-complete and typeahead based on npm package [`react-bootstrap-typeahead`](https://www.npmjs.com/package/react-bootstrap-typeahead).
-- `Files` - the component to input files with drag and drop support based on npm package [`react-files`](https://www.npmjs.com/package/react-files).
+- **[Files](./files.md)** - the component to input files with drag and drop support based on npm package [`react-files`](https://www.npmjs.com/package/react-files).
 - `Tooltip` - the component to render Bootstrap's tooltip based on npm package [`react-bootstrap`](https://www.npmjs.com/package/react-bootstrap).
 - `styled` - React's [styled components](https://styled-components.com/)
