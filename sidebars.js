@@ -24,6 +24,7 @@ const sidebars = {
       "items": [
         'discovery/widgets/widgets',
         'discovery/widgets/ipfs',
+        'discovery/widgets/files',
         'discovery/widgets/markdown',
         'discovery/widgets/overlay-trigger'
       ]
