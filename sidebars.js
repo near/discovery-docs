@@ -23,8 +23,8 @@ const sidebars = {
       },
       "items": [
         'discovery/widgets/widgets',
-        'discovery/widgets/markdown',
         'discovery/widgets/ipfs',
+        'discovery/widgets/markdown',
         'discovery/widgets/overlay-trigger'
       ]
     },
@@ -37,6 +37,7 @@ const sidebars = {
       },
       "items": [
         'discovery/api/cache',
+        'discovery/api/clipboard',
         'discovery/api/fetch',
         'discovery/api/near',
         'discovery/api/primitives',
