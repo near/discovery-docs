@@ -6,16 +6,15 @@ sidebar_label: Clipboard
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The VM implements caching layer for most network requests. You can leverage it manually by using `useCache` hook.
+The VM implements a clipboard API that works like [Mozilla's Clipboard](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText), providing write access to the contents of the system clipboard. The Clipboard API can be used to implement cut, copy, and paste features within a web application.
 
-
-But also for extra safety, the VM now has `isTrusted` as part of the stack. This allows, to verify if the action was part of the stack originating from the `isTrusted` user's event.
-
+:::info
+For extra safety, the VM has `isTrusted` as part of the stack. This allows to verify if the action was part of the stack originating from the `isTrusted` user's event.
+:::
 
 ## writeText
 
-Introduce `clipboard.writeText` to copy given text to the clipboard.
-
+The Clipboard interface's `writeText()` copies the specified text string to the system clipboard.
 
 :::note
 The event requires for the page to be in transient state (explicit user's click).
