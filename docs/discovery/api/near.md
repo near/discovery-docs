@@ -3,7 +3,6 @@ id: near
 title: NEAR API
 sidebar_label: NEAR
 ---
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -19,19 +18,9 @@ VM provides a convenient API to interact with the NEAR blockchain. There are thr
 
 | param                 | required | type | description                                                                                                                                       |
 | --------------------- | -------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blockHeightOrFinality | false    | any  | The block height or finality level to use for the blockchain query (desired block height, or one of the following strings: 'optimistic', 'final') |
+| `blockHeightOrFinality` | _optional_    | any  | The block height or finality level to use for the blockchain query (desired block height, or one of the following strings: `optimistic`, `final`)<br/>- desired block height: The height of the specific block to query, expressed as a positive integer<br/>- `optimistic`: Uses the latest block recorded on the node that responded to your query (<1 second delay)<br/>- `final`: a block that has been validated on at least 66% of the nodes in the network (approx. 2s) |
 
-### Term Definitions
-
-| block height or finality | description                                                                                        |
-| ------------------------ | -------------------------------------------------------------------------------------------------- |
-| desired block height     | The height of the specific block to query, expressed as a positive integer                         |
-| optimistic               | Uses the latest block recorded on the node that responded to your query (<1 second delay)          |
-| final                    | Refers to a block that has been validated on at least 66% of the nodes in the network (approx. 2s) |
-
----
-
-## Example
+### Example
 
 <Tabs>
 <TabItem value="request" label="Request" default>
@@ -41,10 +30,9 @@ return Near.block("optimistic");
 ```
 
 </TabItem>
-<TabItem value="response" label="Response" default>
+<TabItem value="response" label="Response">
 
-```jsx
-
+```json
 {
   "author": "cryptium.poolv1.near",
   "chunks": [
@@ -94,20 +82,24 @@ return Near.block("optimistic");
 </TabItem>
 </Tabs>
 
+---
+
 ## Near.call
 
 | param          | required | type            | description                                                                 |
 | -------------- | -------- | --------------- | --------------------------------------------------------------------------- |
-| `contractName` | true     | str             | Name of the smart contract to call                                          |
-| `methodName`   | true     | str             | Name of the method to call on the smart contract                            |
-| `args`         | false    | object instance | Arguments to pass to the smart contract method as an object instance        |
-| `gas`          | false    | int             | Maximum amount of gas to be used for the transaction (default 300Tg)        |
-| `deposit`      | false    | int             | Amount of NEAR tokens to attach to the call as deposit (in yoctoNEAR units) |
+| `contractName` | **required**     | string             | Name of the smart contract to call                                          |
+| `methodName`   | **required**     | string             | Name of the method to call on the smart contract                            |
+| `args`         | _optional_    | object instance | Arguments to pass to the smart contract method as an object instance        |
+| `gas`          | _optional_    | string / number             | Maximum amount of gas to be used for the transaction (default 300Tg)        |
+| `deposit`      | _optional_    | string / number             | Amount of NEAR tokens to attach to the call as deposit (in yoctoNEAR units) |
 
 This will conduct a call to a smart contract that will store a message onchain.
 
+### Example
+
 <Tabs>
-<TabItems>
+<TabItem value="request" label="Request" default>
 
 ```jsx
 return Near.call("nearsocialexamples.near", "set_greeting", {
@@ -115,20 +107,18 @@ return Near.call("nearsocialexamples.near", "set_greeting", {
 });
 ```
 
-Upon hitting the `Render` button in `Widget Editor` you should see this
+</TabItem>
+<TabItem value="response" label="Response">
 
-<p align="center" style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://i.imgur.com/Lft2rtR.png" />
-</p>
+Upon hitting the `Render` button in `Widget Editor` you should see this:
 
-</TabItems>
-<TabItems>
+![result](https://i.imgur.com/Lft2rtR.png)
 
-Please take a look at this link to the explorer to see the details related to this `Near.call` method
-https://explorer.near.org/transactions/8PyDVdbizhNj81LxfwdZ1WidKZyS8HVZp8udPKgzFiNi
+Please take a look at [this Explorer link](https://explorer.near.org/transactions/8PyDVdbizhNj81LxfwdZ1WidKZyS8HVZp8udPKgzFiNi) to see the details related to this `Near.call` method.
 
-</TabItems>
+</TabItem>
 </Tabs>
+
 
 ---
 
@@ -136,36 +126,36 @@ https://explorer.near.org/transactions/8PyDVdbizhNj81LxfwdZ1WidKZyS8HVZp8udPKgzF
 
 | param              | required | type            | description                                                                                                                    |
 | ------------------ | -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `contractName`     | true     | str             | Name of the smart contract                                                                                                     |
-| `methodName`       | true     | str             | Name of the method to call                                                                                                     |
-| `args`             | false    | object instance | Arguments to pass to the method                                                                                                |
-| `blockId/finality` | false    | str             | Block ID or finality of the transaction                                                                                        |
-| `subscribe`        | false    | bool            | This feature allows users to subscribe to a query, which automatically refreshes the data for all subscribers every 5 seconds. |
+| `contractName`     | **required**     | string             | Name of the smart contract                                                                                                     |
+| `methodName`       | **required**     | string             | Name of the method to call                                                                                                     |
+| `args`             | _optional_    | object instance | Arguments to pass to the method                                                                                                |
+| `blockId/finality` | _optional_    | string             | Block ID or finality of the transaction                                                                                        |
+| `subscribe`        | _optional_    | boolean            | This feature allows users to subscribe to a query, which automatically refreshes the data for all subscribers every 5 seconds. |
 
 <Tabs>
-<TabItems>
+<TabItem value="request" label="Request" default>
 
 ```jsx
 return Near.view("nearsocialexamples.near", "get_greeting", `{}`);
 ```
 
-Upon hitting the `Render` button in `Widget Editor` you should see this
+</TabItem>
+<TabItem value="response" label="Response">
 
-</TabItems>
-<TabItems>
+Upon hitting the `Render` button in `Widget Editor` you should see this:
 
 ```jsx
 "Hi Near Social";
 ```
 
-</TabItems>
+</TabItem>
 </Tabs>
 
-## Call and View Example
+### Call and View Example
 
 Below is an example of how to conduct a Call and View Method within `near.social`
 
-```jsx=
+```jsx
 State.init({
   value: "value to update",
 });
