@@ -19,18 +19,18 @@ const sidebars = {
       "label": "Components",
       "link": {
         "type": "doc",
-        "id": "discovery/widgets/home"
+        "id": "discovery/components/home"
       },
       "items": [
-        'discovery/widgets/widgets',
-        'discovery/widgets/ipfs',
-        'discovery/widgets/files',
-        'discovery/widgets/markdown',
-        'discovery/widgets/overlay-trigger',
-        'discovery/widgets/infinite-scroll',
-        'discovery/widgets/typeahead',
-        'discovery/widgets/styled',
-        'discovery/widgets/tooltip',
+        'discovery/components/widgets',
+        'discovery/components/ipfs',
+        'discovery/components/files',
+        'discovery/components/markdown',
+        'discovery/components/overlay-trigger',
+        'discovery/components/infinite-scroll',
+        'discovery/components/typeahead',
+        'discovery/components/styled',
+        'discovery/components/tooltip',
       ]
     },
     {
