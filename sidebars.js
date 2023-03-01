@@ -28,6 +28,7 @@ const sidebars = {
         'discovery/widgets/markdown',
         'discovery/widgets/overlay-trigger',
         'discovery/widgets/infinite-scroll',
+        'discovery/widgets/typeahead',
       ]
     },
     {
