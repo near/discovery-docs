@@ -95,11 +95,14 @@ hr {
 }
 
 /* for image caption */
-img+em,
-.tabs-container+p em {
+img+em, iframe+em {
     font-style: normal;
     display: inherit;
     text-align: center;
     font-size: 90%;
-    margin: 0.5em 0 0 0;
+    margin: 0.5em 0 2rem 0;
+}
+
+iframe{
+  margin: 2rem 0 0 0;
 }

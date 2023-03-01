@@ -24,6 +24,33 @@ import TabItem from '@theme/TabItem';
  | `key`      |  **required** | object   | a user-defined key  |
  | `widgetSrc`  |  _optional_ | object   | a user-defined widget  |
 
+### Examples
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+```jsx
+const notificationFeedSrc = "mob.near/widget/NotificationFeed";
+
+const lastBlockHeight = Storage.get("lastBlockHeight", notificationFeedSrc);
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+// the value for the "lastBlockHeight" key under the
+// 'mob.near/widget/NotificationFeed' widget is retrieved
+```
+
+</TabItem>
+</Tabs>
+
+
+:::tip
+See a full example in the [NotificationButton source code](https://near.social/#/mob.near/widget/WidgetSource?src=mob.near/widget/NotificationButton).
+:::
+
 ---
 
 ## Storage.set
@@ -35,6 +62,38 @@ import TabItem from '@theme/TabItem';
  | `key`      |  **required** | object   | a user-defined key  |
  | `value`    |  **required** | object   | a user-defined value  |
 
+
+### Examples
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+```jsx
+const accountId = context.accountId;
+
+const notifications = Social.index("notify", accountId, {
+  order: "desc",
+  limit: 100,
+  subscribe: true,
+});
+
+Storage.set("lastBlockHeight", notifications[0].blockHeight);
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+// the "lastBlockHeight" key is set to the value from notifications[0].blockHeight
+```
+
+</TabItem>
+</Tabs>
+
+:::tip
+See a full example in the [NotificationFeed source code](https://near.social/#/mob.near/widget/WidgetSource?src=mob.near/widget/NotificationFeed).
+:::
+
 ---
 
 ## Storage.privateGet
@@ -45,13 +104,55 @@ import TabItem from '@theme/TabItem';
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `key`      |  **required** | object   | a user-defined key under the current widget  |
 
+### Examples
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+```jsx
+const mySecretData = Storage.privateGet("secretKey");
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+// the current value of 'secretKey' is retrieved from private storage
+```
+
+</TabItem>
+</Tabs>
+
 ---
 
 ## Storage.privateSet
 
-`Storage.privateSet(key, value)` - sets the private value for a given key under the current widget. The value is private, only the current widget can read it. Private and public values can share the same key and don't conflict.
+`Storage.privateSet(key, value)` - sets the private value for a given key under the current widget. The value is private, only the current widget can read it.
+
+:::note
+Private and public values can share the same key and don't conflict.
+:::
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `key`      |  **required** | object   | a user-defined key under the current widget |
  | `value`    |  **required** | object   | a user-defined value  |
+
+### Examples
+
+<Tabs>
+<TabItem value="request" label="Request" default>
+
+```jsx
+Storage.privateSet("secretKey", "my-secret-value");
+```
+
+</TabItem>
+<TabItem value="response" label="Response">
+
+```json
+// "my-secret-value" is privately stored under 'secretKey'
+```
+
+</TabItem>
+</Tabs>
