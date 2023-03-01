@@ -2,7 +2,7 @@
 
 ## Description
 
-The `TypeAhead` component provides a typeahead input field for selecting an option from a list of choices. This component is imported from the `react-bootstrap-typeahead` package and more information about the component can be found [here](https://github.com/ericgio/react-bootstrap-typeahead).
+The `TypeAhead` component provides a type-ahead input field for selecting an option from a list of choices. This component is imported from the `react-bootstrap-typeahead` package; more information about the component can be found [here](https://github.com/ericgio/react-bootstrap-typeahead).
 
 ## Example
 
@@ -22,6 +22,6 @@ return (
 );
 ```
 
-See this code in action by following a this link to the `near.social` example.
-
-https://near.social/#/dorgon108.near/widget/TypeAheadExample
+:::tip
+See this code in action by following [this link](https://near.social/#/dorgon108.near/widget/TypeAheadExample) to the `near.social` example.
+:::
