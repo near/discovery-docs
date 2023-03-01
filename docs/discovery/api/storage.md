@@ -40,7 +40,7 @@ const lastBlockHeight = Storage.get("lastBlockHeight", notificationFeedSrc);
 
 ```json
 // the value for the "lastBlockHeight" key under the
-// 'mob.near/widget/NotificationFeed' widget is retrived
+// 'mob.near/widget/NotificationFeed' widget is retrieved
 ```
 
 </TabItem>
