@@ -56,15 +56,8 @@ const sidebars = {
       "type": "html",
       "value": "<span class='menu__link'><b><small> Tutorials </small></b></span>"
     },
-    'tutorial/welcome',
-    {
-      "Basics": [
-        'tutorial/hello-world',
-        'tutorial/hello-account',
-        'tutorial/checked',
-        'tutorial/add-html',
-      ]
-    },
+    'tutorial/quickstart',
+    'tutorial/interaction',
     {
       "type": "html",
       "value": "<hr/>"

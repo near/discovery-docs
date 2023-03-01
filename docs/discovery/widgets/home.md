@@ -5,7 +5,7 @@ title: Components
 
 In Discovery, you build apps (named Components) by composing small applications known as `Widgets`.
 
-![widgets](https://github.com/gagdiez/near-social-knowledge/raw/main/imgs/widgets.png)
+![widgets](@site/static/docs/widgets.jpeg)
 *Decomposing the [near.social](https://near.social) component into its widgets*
 
 ---
