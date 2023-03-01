@@ -30,6 +30,7 @@ const sidebars = {
         'discovery/widgets/infinite-scroll',
         'discovery/widgets/typeahead',
         'discovery/widgets/styled',
+        'discovery/widgets/tooltip',
       ]
     },
     {
