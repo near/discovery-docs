@@ -3,7 +3,7 @@ id: interaction
 title: Smart Contract Interaction
 ---
 
-Your frontend can interact with different blockchains using the built-in Discovery API. Lets see how to create an applications that reads and stores a greeting from a NEAR smart contract. 
+Your frontend can interact with different blockchains using the built-in Discovery API. Let's see how to create an application that reads and stores a greeting from a NEAR smart contract. 
 
 ![widgets](@site/static/docs/hello-near-logedin.png)
 *View of our Hello Near app when the user is logged-in*
@@ -93,7 +93,7 @@ return (
 :::info Relevant HTML
 There are two important things to notice in the code above:
 
-1. **onChange & onClick**: We have prepared our `<input>` and `<button>` to act when something happens. Particularly, we will build two methods: one for when the input changes, and one for when the button is pressed.
+1. **onChange & onClick**: We have prepared our `<input>` and `<button>` to act when something happens. Particularly, we will build two methods: one when the input changes, and one when the button is pressed.
 
 2. **context.accountId**: We check if `context.accountId` is set, which tells us if the user has logged in using their NEAR account, and thus can interact with NEAR contracts.
 :::
@@ -136,6 +136,8 @@ const onBtnClick = () => {
 ## Complete Example
 We have deployed a complete version of this example on the NEAR blockchain, so you can see its code and play with it.
 
-- **Code**: Check the code of this example at its [near.social code page](https://near.social/#/mob.near/widget/WidgetSource?src=gagdiez.near/widget/HelloNear).
+:::tip
+- **Code**: Check the code of this example at the [near.social code page](https://near.social/#/mob.near/widget/WidgetSource?src=gagdiez.near/widget/HelloNear).
 
-- **Try It**: Interact with the application [at its near.social page](https://near.social/#/gagdiez.near/widget/HelloNear).
+- **Try It**: Interact with the application at the [near.social page](https://near.social/#/gagdiez.near/widget/HelloNear).
+:::

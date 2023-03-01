@@ -12,15 +12,15 @@ NEAR Discovery allows you to create a decentralized frontend for your dApp by cr
 ## Editors
 In order to create your decentralized frontend there is a variety of editors you can choose from:
 
-- VSCODE Extension: https://marketplace.visualstudio.com/items?itemName=near-protocol.near-social-ide
-- NEAR Social Editor: https://near.social/#/edit
-- Blockchain Operative System Editor: https://bos.gg/#/edit
+- [VSCODE Extension](https://marketplace.visualstudio.com/items?itemName=near-protocol.near-social-ide)
+- [NEAR Social Editor](https://near.social/#/edit)
+- [Blockchain Operative System Editor](https://bos.gg/#/edit)
 
 ---
 
 ## Creating Your First Widget
 
-To create a `widget` you justs need to write valid JSX code, i.e. a mixture of HTML and JS. Lets see how simple it is to create your first widget, and previewing it.
+To create a `widget` you only need to write valid JSX code, i.e. a mixture of HTML and JS. Let's see how simple it is to create and preview your first widget.
 
 <hr class="subsection" />
 
