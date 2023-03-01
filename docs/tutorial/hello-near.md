@@ -16,7 +16,7 @@ Check the finished example at [near.social code page](https://near.social/#/mob.
 
 ## The Contract
 
-We have deployed a `Hello World` smart contract in the NEAR network at `hello.near-examples.near`. Tje contract exposes two methods:
+We have deployed a `Hello World` smart contract in the NEAR network at `hello.near-examples.near`. The contract exposes two methods:
 - `set_greeting(greeting: string): void`, which accepts a greeting and stores it in the contract state.
 - `get_greeting(): string` which returns the stored greeting.
 
