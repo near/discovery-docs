@@ -10,7 +10,7 @@ Discovery allows you to create a decentralized frontend by composing small appli
 ## [Components](./widgets/home.md)
 A component is a composition of atomic units known as [`widgets`](./widgets/home.md). Composing multiple `widgets` allows you to create a fully decentralized frontend.
 
-![widgets](https://github.com/gagdiez/near-social-knowledge/raw/main/imgs/widgets.png)
+![widgets](@site/static/docs/widgets.jpeg)
 *Decomposing the [near.social](https://near.social) component into its widgets*
 
 
