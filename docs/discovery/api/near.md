@@ -119,7 +119,6 @@ Please take a look at [this Explorer link](https://explorer.near.org/transaction
 </TabItem>
 </Tabs>
 
-
 ---
 
 ## Near.view
