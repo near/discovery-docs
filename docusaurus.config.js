@@ -151,6 +151,7 @@ const config = {
         ]
       },
     }),
+    plugins: [path.join(__dirname, '/plugins/monaco-editor')],
 };
 
 module.exports = config;

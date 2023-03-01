@@ -31,7 +31,8 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.2.0",
     "file-loader": "^6.2.0",
-    "worker-loader": "^3.0.8"
+    "worker-loader": "^3.0.8",
+    "monaco-editor-webpack-plugin": "^7.0.1"
   },
   "browserslist": {
     "production": [

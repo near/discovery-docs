@@ -1,13 +1,11 @@
 import React from "react";
 import MonacoEditor from 'react-monaco-editor';
 import * as monaco_editor from 'monaco-editor';
-const uuid = require("uuid")
 
 export function WidgetEditor({ children, id=1 }) {
+
   const uri = "https://near.social/#/embed/zavodil.near/widget/remote-code?name=Anna";
   const code = children.props.children.props.children;
-
-  console.log("Children", children.props.children.props.children)
 
   return <>
     <div class="monaco">
@@ -34,7 +32,7 @@ export function WidgetEditor({ children, id=1 }) {
     </div>
     <em> You can edit the code! </em>
 
-        <hr className="subsection" />
+    <hr className="subsection" />
 
     <h4>Resulting Widget</h4>
     <div class="code_iframe">
@@ -44,4 +42,3 @@ export function WidgetEditor({ children, id=1 }) {
 }
 
 export default WidgetEditor;
-

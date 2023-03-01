@@ -129,8 +129,8 @@ img+em, .tabs-container+p em {
 
 .code_iframe iframe{
   min-width: 100%;
-  min-height: 160px;
   overflow: hidden;
+  min-height: 160px;
 }
 
 .monaco-editor-background {
