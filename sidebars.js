@@ -47,6 +47,7 @@ const sidebars = {
         'discovery/api/social',
         'discovery/api/state',
         'discovery/api/storage',
+        'discovery/api/styled',
       ]
     },
     {
