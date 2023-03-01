@@ -1,4 +1,8 @@
-# TypeAhead Component
+---
+id: typeahead
+title: TypeAhead Component
+sidebar_label: TypeAhead
+---
 
 ## Description
 
