@@ -5,11 +5,11 @@ title: Widgets
 
 `Widgets` are the smallest unit of a frontend in Discovery. Similar to React components, they are written using a limited version of [JSX](https://reactjs.org/docs/introducing-jsx.html).
 
-The code is executed in custom Virtual Machine to create a secure sandbox, thus ensuring the widgets can't access local storage or cookies.
+The code is executed in custom Virtual Machine to create a secure sandbox, thus ensuring the components can't access local storage or cookies.
 
 ---
 
-## Creating a Widget
+## Creating a Component
 
 To create a `widget` you simply need to write valid JSX code, i.e. a mixture of HTML and JS.
 
@@ -46,7 +46,7 @@ By default, the `widgets` have access to the [`Bootstrap`](https://getbootstrap.
 
 You can compose multiple `widgets`. This will allow you to create complex applications. 
 
-To import `widget`, you only need to know who created it (their NEAR username), and the name of the widget. Then, simply use the `Widget` component
+To import `widget`, you only need to know who created it (their NEAR username), and the name of the component. Then, simply use the `Widget` component
 
 
 ```ts
@@ -94,4 +94,4 @@ Then simply paste it into your code.
 ---
 
 ## Open Source With Version Control
-The source code of every widget is openly stored in [SocialDB](../../social/home.md). The owner of the widget can update the widget's code, and since SocialDB is stored on a blockchain, all the previous versions of the widget will remain available.
+The source code of every component is openly stored in [SocialDB](../../social/home.md). The owner of the component can update it's code, and since SocialDB is stored on a blockchain, all the previous versions of the component will remain available.

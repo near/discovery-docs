@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 ## Storage
 
-`Storage` object to store data for widgets that is persistent across refreshes. Simulates `localStorage` access. It has 4 methods:
+`Storage` object to store data for components that is persistent across refreshes. Simulates `localStorage` access. It has 4 methods:
 
 - [`Storage.get`](#storageget)
 - [`Storage.set`](#storageset)
@@ -17,12 +17,12 @@ import TabItem from '@theme/TabItem';
 
 ## Storage.get
 
-`Storage.get(key, widgetSrc?)` - returns the public value for a given key under the given widgetSrc or the current widget (if `widgetSrc` is omitted). Can only read public values.
+`Storage.get(key, widgetSrc?)` - returns the public value for a given key under the given widgetSrc or the current component if `widgetSrc` is omitted. Can only read public values.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `key`      |  **required** | object   | a user-defined key  |
- | `widgetSrc`  |  _optional_ | object   | a user-defined widget  |
+ | `widgetSrc`  |  _optional_ | object   | a user-defined component  |
 
 ### Examples
 
@@ -98,11 +98,11 @@ See a full example in the [NotificationFeed source code](https://near.social/#/m
 
 ## Storage.privateGet
 
-`Storage.privateGet(key)` - returns the private value for a given key under the current widget.
+`Storage.privateGet(key)` - returns the private value for a given key under the current component.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `key`      |  **required** | object   | a user-defined key under the current widget  |
+ | `key`      |  **required** | object   | a user-defined key under the current component  |
 
 ### Examples
 
@@ -127,7 +127,7 @@ const mySecretData = Storage.privateGet("secretKey");
 
 ## Storage.privateSet
 
-`Storage.privateSet(key, value)` - sets the private value for a given key under the current widget. The value is private, only the current widget can read it.
+`Storage.privateSet(key, value)` - sets the private value for a given key under the current component. The value is private, only the current component can read it.
 
 :::note
 Private and public values can share the same key and don't conflict.
@@ -135,7 +135,7 @@ Private and public values can share the same key and don't conflict.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `key`      |  **required** | object   | a user-defined key under the current widget |
+ | `key`      |  **required** | object   | a user-defined key under the current component |
  | `value`    |  **required** | object   | a user-defined value  |
 
 ### Examples

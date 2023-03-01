@@ -13,7 +13,7 @@ In Discovery, you build apps (named Components) by composing small applications 
 ## Predefined Components
 Discovery readily provides a set of components so you can readily start building your application.
 
-### Non-Exhaustive List of Predefined Widgets 
+### Non-Exhaustive List of Predefined Components 
 
 - **[Widget](./widget.md)**: The minimum unit of a frontend.
 - **[Markdown](./markdown.md)**: Renders markdown text.
