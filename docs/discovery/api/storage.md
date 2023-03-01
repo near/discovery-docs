@@ -39,7 +39,8 @@ const lastBlockHeight = Storage.get("lastBlockHeight", notificationFeedSrc);
 <TabItem value="response" label="Response">
 
 ```json
-// Copy "HelloWorld!" to clipboard
+// the value for the "lastBlockHeight" key under the
+// 'mob.near/widget/NotificationFeed' widget is retrived
 ```
 
 </TabItem>
@@ -78,7 +79,7 @@ Storage.set("lastBlockHeight", notifications[0].blockHeight);
 <TabItem value="response" label="Response">
 
 ```json
-// Copy "HelloWorld!" to clipboard
+// the "lastBlockHeight" key is set to the value from notifications[0].blockHeight
 ```
 
 </TabItem>
@@ -107,7 +108,7 @@ const mySecretData = Storage.privateGet("secretKey");
 <TabItem value="response" label="Response">
 
 ```json
-// Copy "HelloWorld!" to clipboard
+// the current value of 'secretKey' is retrieved from private storage
 ```
 
 </TabItem>
@@ -141,7 +142,7 @@ Storage.privateSet("secretKey", "my-secret-value");
 <TabItem value="response" label="Response">
 
 ```json
-// Copy "HelloWorld!" to clipboard
+// "my-secret-value" is privately stored under 'secretKey'
 ```
 
 </TabItem>
