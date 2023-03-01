@@ -1,14 +1,18 @@
-# ToolTip Component
+---
+id: tooltip
+title: ToolTip Component
+sidebar_label: ToolTip
+---
 
 ## Description
 
-This special component displays a message once the mouse hovers over a particular DOM item. This component was imported into NEAR Social from `React-Bootstrap` and more info can be found [here](https://react-bootstrap.netlify.app/components/overlays/#tooltips)
+This special component displays a message once the mouse hovers over a particular DOM item. This component was imported into NEAR Social from `React-Bootstrap` and more info can be [found here](https://react-bootstrap.netlify.app/components/overlays/#tooltips).
 
 ## Example
 
-The code has been adopted and modified from the `react-bootstrap` documentation website. Below demonstrates how to implement the message over a button and how to reposition it.
+The code has been adopted and modified from the `react-bootstrap` documentation website. The snippet below demonstrates how to implement the message over a button and how to reposition it.
 
-```jsx=
+```jsx
 return (
   <>
     {["top", "right", "bottom", "left"].map((placement) => (
@@ -31,6 +35,6 @@ return (
 
 ```
 
-You can run and try out this code directly in `near.social` by following the link to this example!
-
-https://near.social/#/dorgon108.near/widget/ToolTipExample
+:::tip
+You can run and try out this code directly in `near.social` by following [this link](https://near.social/#/dorgon108.near/widget/ToolTipExample).
+:::
