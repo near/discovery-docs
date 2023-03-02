@@ -222,7 +222,7 @@ For example:
 - `alice.near/profile/**` will match the entire profile data of account `alice.near`.
 - `alice.near/profile/*` will match all the fields of the profile, but not the nested objects.
 - `alice.near/profile/name` will match only the name field of the profile.
-- `*/widget/*` will match all the widgets of all the accounts.
+- `*/widget/*` will match all the components of all the accounts.
 
 ```rust
 pub struct GetOptions {
@@ -271,8 +271,8 @@ It also has an additional `options` field that can be used to specify the return
 For example:
 - `alice.near/profile/*` will return the list of all the fields of the profile, but not the nested objects.
 - `*/profile/image/nft` will return the list of all the accounts that have an NFT image in their profile.
-- `alice.near/widget/*` with `return_deleted` option will return the list of all the widget names of the account, including the deleted ones.
-- `alice.near/widget/*` with `return_type` equal to `BlockHeight` will return the list of all the widget names of the account and the value will be the block height when the widget was last updated.
+- `alice.near/widget/*` with `return_deleted` option will return the list of all the component names of the account, including the deleted ones.
+- `alice.near/widget/*` with `return_type` equal to `BlockHeight` will return the list of all the component names of the account and the value will be the block height when the widget was last updated.
 - Note `**` is not supported by the `keys` method.
 
 ```rust
@@ -318,13 +318,13 @@ Now as you are familiar with the SocialDB contract, let's dive into [near.social
 
 ### Near Social VM
 
-The Near Social VM is a virtual machine that executes the widgets' code.
-It's a sandboxed environment that allows to render widgets in a secure way.
+The Near Social VM is a virtual machine that executes the components' code.
+It's a sandboxed environment that allows to render components in a secure way.
 
 I highly recommend getting yourself familiar with [ReactJS](https://reactjs.org/) and go through the [React tutorial](https://reactjs.org/tutorial/tutorial.html).
-It will help you to understand how to use widgets better.
+It will help you to understand how to use components better.
 
-Widgets are like a React functional components, but with omitted function declaration.
+Components are like a React functional components, but with omitted function declaration.
 For example, in a React you would write:
 ```jsx
 function MyComponent(props) {
@@ -337,26 +337,26 @@ But in the Near Social VM you only need to write the body of the function:
 return <div>Hello, {props.username}!</div>;
 ```
 
-Note, widgets are executed in a synchronous way, and the VM doesn't support await/async operations.
-Instead, async operations like `fetch` or `Social.get` are internally handled by the VM, and the VM updates the widget's state when the operation is finished.
+Note, components are executed in a synchronous way, and the VM doesn't support await/async operations.
+Instead, async operations like `fetch` or `Social.get` are internally handled by the VM, and the VM updates the component's state when the operation is finished.
 It's similar to use React's `useEffect` combined with `useState`.
 
-A common read-only widget consists of the following parts:
+A common read-only component consists of the following parts:
 - **Preparing input**. E.g. taking data from passed in properties or getting it from the context (e.g. the signed in account ID).
 - **Fetching data**. E.g. fetching the data from the SocialDB contract.
 - **Processing data**. E.g. filtering the data, sorting it, etc.
 - **Rendering**. E.g. rendering the data using React components.
 
-Not all widgets have to fetch data from the SocialDB contract. Some widgets can be completely static. Let's dive into each part.
+Not all components have to fetch data from the SocialDB contract. Some components can be completely static. Let's dive into each part.
 
 #### Preparing input
 
-Similar to a React component, the widget receives the input in the object `props`.
-If the widget is a child of another widget, the parent widget can pass the data to the child widget.
+Similar to a React component, the component receives the input in the object `props`.
+If the component is a child of another component, the parent component can pass the data to the child component.
 The props can contain: data, functions or React components.
-The data will be a copy of the data passed to the widget, so if the widget changes the data, it won't affect the parent widget.
+The data will be a copy of the data passed to the component, so if the component changes the data, it won't affect the parent component.
 
-Another object that is available to the widget is `context`.
+Another object that is available to the component is `context`.
 Currently, it only contains a single field `accountId` that contains the account ID of the signed-in user or `undefined` otherwise.
 
 A common example preparing the input is the following:
@@ -369,9 +369,9 @@ const accountId = props.accountId ?? context.accountId;
 See Near Social VM APIs section for the list of available APIs.
 
 Since the VM is synchronous, you should schedule all data that you need to fetch before processing it.
-This will issue all promises in parallel and will update rerender the widget whenever any of the promises is resolved.
+This will issue all promises in parallel and will update rerender the component whenever any of the promises is resolved.
 
-You can build a widget that either fetches the data or renders the given data.
+You can build a component that either fetches the data or renders the given data.
 For example, we want to fetch the profile for the `accountId` or use the given `profile` if it's passed in the props.
 ```jsx
 const profile = props.profile ?? Social.getr(`${accountId}/profile`);
@@ -381,10 +381,10 @@ if (profile === null) {
 }
 ```
 
-Comparing to the React components, `Social.getr` is not a hook, so you can return the value from the widget at any time.
+Comparing to the React components, `Social.getr` is not a hook, so you can return the value from the component at any time.
 Even if you have more fetches after this.
 
-The value returned by `Social.getr` will be globally cached for the duration of the web session, and it's also cached by the widget's VM.
+The value returned by `Social.getr` will be globally cached for the duration of the web session, and it's also cached by the component's VM.
 So if you call `Social.getr` multiple times with the same key, it will return the same value immediately.
 
 #### Processing data
@@ -403,7 +403,7 @@ If the data processing is expensive, you can wrap it in a function and call it o
 
 Now you have the data ready to be rendered.
 You can use most React components to render the data.
-But also you can embed other widgets.
+But also you can embed other components.
 [near.social](https://near.social) doesn't allow specifying custom CSS classes, but provides a standard [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/) CSS classes.
 
 We can render the profile object and also include a list of tags:
@@ -444,7 +444,7 @@ return (
 );
 ```
 
-You can notice that we use the `Widget` component to embed another widget:
+You can notice that we use the `Widget` component to embed another component:
 ```jsx
 <Widget
   src="mob.near/widget/ProfileImage"
@@ -457,17 +457,17 @@ You can notice that we use the `Widget` component to embed another widget:
 ```
 
 The `Widget` component takes the `src` and `props` parameters.
-- `src` is the widget's name. It should be full path to the widget, e.g. `mob.near/widget/ProfileImage`.
-- `props` is the object with the props that will be passed to the widget.
+- `src` is the component's name. It should be full path to the component, e.g. `mob.near/widget/ProfileImage`.
+- `props` is the object with the props that will be passed to the component.
 
-In our case we use `mob.near/widget/ProfileImage` widget to render the profile image, and we pass the `profile` object, so that widget doesn't need to fetch it again.
+In our case we use `mob.near/widget/ProfileImage` component to render the profile image, and we pass the `profile` object, so that component doesn't need to fetch it again.
 
 The full source is available in [mob.near/widget/ProfileDocsExample](https://near.social/#/mob.near/widget/WidgetSource?src=mob.near/widget/ProfileDocsExample)
 
-### Widget's state
+### Component's state
 
-Similar to React components, widgets have the state.
-But instead of multiple state object that can be created using `useState` hooks, the widget has a single state object called `state`.
+Similar to React components, components have the state.
+But instead of multiple state object that can be created using `useState` hooks, the component has a single state object called `state`.
 
 By default, the `state` equals to `undefined` and needs to be initialized either with `State.init` or `State.update` functions.
 
@@ -484,7 +484,7 @@ One of the reasons why you need the state is to have controlled input components
 For example, you want to have an input to enter an account ID.
 The account ID can only contain certain characters (e.g. no uppercase), so when a user enters an uppercase character, you want to convert it to lowercase and remove all non-valid ones.
 
-So you can create the following widget:
+So you can create the following component:
 ```jsx
 State.init({ accountId: "" });
 
@@ -520,14 +520,14 @@ You can see a more complicated data processing example in [mob.near/widget/TagsE
 
 ### Committing data
 
-The widgets can commit data to SocialDB. To simplify the process a custom component `CommitButton` is provided.
+The components can commit data to SocialDB. To simplify the process a custom component `CommitButton` is provided.
 
 The `CommitButton` component has three custom props:
 - `data` - the data to commit. It can be any valid JSON-serializable object. The data doesn't have to start with the `accountId` prefix, it will be added automatically.
 - `onClick` - the callback that will be called when the user clicks the button, but before the commit dialog is shown.
 - `onCommit` - the callback that will be called when the user commits the data.
 
-For example, we can create a notepad widget. It will load the note from the `experimental/note` key, and will allow to edit it and then save it.
+For example, we can create a notepad component. It will load the note from the `experimental/note` key, and will allow to edit it and then save it.
 ```jsx
 const accountId = context.accountId;
 

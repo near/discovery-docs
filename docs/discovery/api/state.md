@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 ## State APIs
 
-VM provides a convenient API to update the state of the widget. There are two methods:
+VM provides a convenient API to update the state of the component. There are two methods:
 - [`State.init`](#stateinit)
 - [`State.update`](#stateupdate)
 
@@ -38,11 +38,11 @@ See this [full example on GitHub here](https://github.com/near/near-search/blob/
 
 ## State.init
 
-`State.init` takes an object as an argument and initializes the state of the widget with this object. It'll be no-op if the state is already initialized.
+`State.init` takes an object as an argument and initializes the state of the component with this object. It'll be no-op if the state is already initialized.
 
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
- | `state`      |  **required** | object   | an initial state object for the widget  |
+ | `state`      |  **required** | object   | an initial state object for the component  |
 
 ### `State.init()` Example
 
@@ -69,7 +69,7 @@ State.init({
 
 ### `State.init()` Implementation Details
 
-The state object is both stored in the `state` property of the widget virtual machine and in the `state` property of the react component. The state is initialized with the given object.
+The state object is both stored in the `state` property of the component virtual machine and in the `state` property of the react component. The state is initialized with the given object.
 
 ```js reference title="VM.js"
 https://github.com/NearSocial/VM/blob/5b68433497272c23bf7d06a992c3209f3c97a2b5/src/lib/vm/vm.js#L754-L773
@@ -112,7 +112,7 @@ State.update({
 
 ### `State.update()` Implementation Details
 
-The state is stored in the `state` property of the widget. The state is initialized with an empty object `{}`. `Object.assign` is used to update the state.
+The state is stored in the `state` property of the component. The state is initialized with an empty object `{}`. `Object.assign` is used to update the state.
 
 ```js reference title="VM.js"
 https://github.com/NearSocial/VM/blob/5b68433497272c23bf7d06a992c3209f3c97a2b5/src/lib/vm/vm.js#L774-L786

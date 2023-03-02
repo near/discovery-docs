@@ -3,7 +3,7 @@ id: home
 title: Introduction
 ---
 
-Discovery provides a complete API to allow your [components](../widgets/home.md) to interact with different blockchains, websites, and store data in a decentralized way.
+Discovery provides a complete API to allow your [components](../components/home.md) to interact with different blockchains, websites, and store data in a decentralized way.
 
 Custom objects:
 - [`Social`](social.md) - the SocialDB API.
