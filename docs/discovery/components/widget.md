@@ -16,19 +16,18 @@ To create a `widget` you simply need to write valid JSX code, i.e. a mixture of 
 
 As with React Components, `widget` can take properties through their `props` value.
 
-<WidgetEditor id='1'>
+<WidgetEditor id='1' height="130px">
 
 ```ts
 let greeting = "Have a great day";
+let username = props.name || "User";
 
 return (
   <>
     <div class="container border border-info p-3 text-center min-vw-100">
-      <h1>Hello {props.name}</h1>
+      <h1>Hello {username}</h1>
 
       <p> {greeting} </p>
-
-      <button class="btn btn-primary"> Bootstrap Button </button>
     </div>
   </>
 );
@@ -49,7 +48,7 @@ You can compose multiple `widgets`. This will allow you to create complex applic
 To import `widget`, you only need to know who created it (their NEAR username), and the name of the component. Then, simply use the `Widget` component
 
 
-<WidgetEditor id='2'>
+<WidgetEditor id='2' height="220px">
 
 ```ts
 const user = "gagdiez.near";

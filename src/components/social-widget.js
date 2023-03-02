@@ -1,9 +1,9 @@
 import React from "react";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-export function WidgetEditor({ children, id = 1 }) {
+export function WidgetEditor({ children, id=1, height="160px"  }) {
 
-  const uri = "https://near.social/#/embed/zavodil.near/widget/remote-code?name=Anna";
+  const uri = "https://near.social/#/embed/zavodil.near/widget/remote-code?";
   const code = children.props.children.props.children;
 
   return (
@@ -36,11 +36,10 @@ export function WidgetEditor({ children, id = 1 }) {
           </div>
           <em> You can edit the code! </em>
 
-          <hr className="subsection" />
-
-          <h4>Resulting Widget</h4>
           <div class="code_iframe">
-            <iframe id={`ifm${id}`} src={`${uri}&code=${code}`}></iframe>
+            <h4>Preview</h4>
+            <hr class="preview-border" />
+            <iframe id={`ifm${id}`} src={`${uri}&code=${code}`} style={{height}}></iframe>
           </div>
         </>
 

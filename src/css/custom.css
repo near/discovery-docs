@@ -123,20 +123,21 @@ img+em, iframe+em {
   border-radius: 10px;
   border: 1px solid #e6e6e6;
   padding: 1rem;
-  margin-bottom: 3rem;
   overflow: hidden;
+  margin: 2rem 0;
 }
 
 .code_iframe iframe{
   min-width: 100%;
   overflow: hidden;
-  min-height: 160px;
 }
 
 .monaco-editor-background {
   background-color: #f6f8fa !important;
 }
 
-iframe{
-  margin: 2rem 0 0 0;
+.preview-border{
+  width: 100%;
+  border: 0.6px solid #efefef;
+  margin: -0.5rem 0 1.5rem 0;
 }
