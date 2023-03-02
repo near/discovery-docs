@@ -2,6 +2,7 @@
 id: widgets
 title: Widgets
 ---
+import {WidgetEditor} from "@site/src/components/social-widget"
 
 `Widgets` are the smallest unit of a frontend in Discovery. Similar to React components, they are written using a limited version of [JSX](https://reactjs.org/docs/introducing-jsx.html).
 
@@ -15,12 +16,14 @@ To create a `widget` you simply need to write valid JSX code, i.e. a mixture of 
 
 As with React Components, `widget` can take properties through their `props` value.
 
+<WidgetEditor id='1'>
+
 ```ts
 let greeting = "Have a great day";
 
 return (
   <>
-    <div class="container border border-info p-3 text-center">
+    <div class="container border border-info p-3 text-center min-vw-100">
       <h1>Hello {props.name}</h1>
 
       <p> {greeting} </p>
@@ -31,10 +34,7 @@ return (
 );
 ```
 
-<hr class="subsection"/>
-
-#### Resulting Widget
-![img](@site/static/docs/widget-basic.png)
+</WidgetEditor>
 
 :::tip
 By default, the `widgets` have access to the [`Bootstrap`](https://getbootstrap.com/docs/4.1/getting-started/introduction/) library, to simplify your frontend development.
@@ -49,25 +49,27 @@ You can compose multiple `widgets`. This will allow you to create complex applic
 To import `widget`, you only need to know who created it (their NEAR username), and the name of the component. Then, simply use the `Widget` component
 
 
+<WidgetEditor id='2'>
+
 ```ts
 const user = "gagdiez.near";
 const props = { name: "Anna" };
 
 return (
   <>
-    <h3> Composing Widgets </h3>
-    <p> Widgets can be composed </p>
-    <hr />
+    <div class="container min-vw-100">
 
-    <Widget src={`${user}/widget/Greetings`} props={props} />
+      <h3> Composing Widgets </h3>
+      <p> Widgets can be composed </p>
+      <hr />
+
+      <Widget src={`${user}/widget/Greetings`} props={props} />
+    </div>
   </>
 );
 ```
 
-<hr class="subsection"/>
-
-#### Resulting Widget
-![img](@site/static/docs/widget-composed.png)
+</WidgetEditor>
 
 ---
 
