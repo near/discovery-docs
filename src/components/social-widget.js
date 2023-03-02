@@ -4,6 +4,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 export function WidgetEditor({ children, id=1, height="160px"  }) {
 
   const uri = "https://near.social/#/embed/zavodil.near/widget/remote-code?";
+
   const code = children.props.children.props.children;
 
   return (
