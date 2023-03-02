@@ -40,7 +40,7 @@ return (
 
 ## Props: Receiving Input
 
-Components can take arbitrary input, which will be reflected in the `props` variable. In the example bellow, we are passing as input `name="Anna"`.
+Components can take arbitrary input, which will be reflected in the `props` variable. In the example below, we are passing as input `name="Anna"`.
 
 <WidgetEditor id='2' height="130px" properties={{name: "Anna"}}>
 
