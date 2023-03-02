@@ -1,51 +1,10 @@
 ---
 id: widgets
-title: Widgets
+title: Widget
 ---
 import {WidgetEditor} from "@site/src/components/social-widget"
 
-`Widgets` are the smallest unit of a frontend in Discovery. Similar to React components, they are written using a limited version of [JSX](https://reactjs.org/docs/introducing-jsx.html).
-
-The code is executed in custom Virtual Machine to create a secure sandbox, thus ensuring the components can't access local storage or cookies.
-
----
-
-## Creating a Component
-
-To create a `widget` you simply need to write valid JSX code, i.e. a mixture of HTML and JS.
-
-As with React Components, `widget` can take properties through their `props` value.
-
-<WidgetEditor id='1' height="130px">
-
-```ts
-let greeting = "Have a great day";
-let username = props.name || "User";
-
-return (
-  <>
-    <div class="container border border-info p-3 text-center min-vw-100">
-      <h1>Hello {username}</h1>
-      <p> {greeting} </p>
-    </div>
-  </>
-);
-```
-
-</WidgetEditor>
-
-:::tip
-By default, the `widgets` have access to the [`Bootstrap`](https://getbootstrap.com/docs/4.1/getting-started/introduction/) library, to simplify your frontend development.
-:::
-
----
-
-## Composing a Widget
-
-You can compose multiple `widgets`. This will allow you to create complex applications. 
-
-To import `widget`, you only need to know who created it (their NEAR username), and the name of the component. Then, simply use the `Widget` component
-
+The predefined component `Widget` allows you to include an existing component into your code, thus enabling to create complex applications by composing components.
 
 <WidgetEditor id='2' height="220px">
 
@@ -68,30 +27,3 @@ return (
 ```
 
 </WidgetEditor>
-
----
-
-## Searching for Widgets
-
-To save time when searching for a `widget` to import, you can use the [search tool provided by `near.social`](https://near.social/#/mob.near/widget/Applications).
-
-<div align="center">
-  <img src="https://i.imgur.com/oaM1cvp.png" width="400" />
-</div>
-
-Search for component you want, then select the `embed` option. This will will copy the `Widget` component with the src info to your `clipboard`
-
-<div align="center">
-  <img src="https://i.imgur.com/Wnr3Xx9.png" width="400" />
-</div>
-
-Then simply paste it into your code.
-
-<div align="center">
-  <img src="https://i.imgur.com/wJhcuqp.png" width="400" />
-</div>
-
----
-
-## Open Source With Version Control
-The source code of every component is openly stored in [SocialDB](../../social/home.md). The owner of the component can update it's code, and since SocialDB is stored on a blockchain, all the previous versions of the component will remain available.

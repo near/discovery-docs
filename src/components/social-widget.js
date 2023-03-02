@@ -1,11 +1,17 @@
 import React from "react";
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
-export function WidgetEditor({ children, id=1, height="160px"  }) {
+export function WidgetEditor({ children, id=1, height="160px", properties  }) {
+  let props = "";
+  for(const prop in properties){
+    props += `${prop}=${properties[prop]}`
+  }
 
-  const uri = "https://near.social/#/embed/zavodil.near/widget/remote-code?";
+  const uri = "https://near.social/#/embed/zavodil.near/widget/remote-code?"+props;
 
   const code = children.props.children.props.children;
+
+
 
   return (
     <BrowserOnly fallback={<div>Loading...</div>}>
