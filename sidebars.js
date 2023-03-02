@@ -23,9 +23,11 @@ const sidebars = {
       },
       "items": [
         'discovery/widgets/widgets',
-        'discovery/widgets/markdown',
         'discovery/widgets/ipfs',
-        'discovery/widgets/overlay-trigger'
+        'discovery/widgets/files',
+        'discovery/widgets/markdown',
+        'discovery/widgets/overlay-trigger',
+        'discovery/widgets/infinite-scroll',
       ]
     },
     {
@@ -37,6 +39,7 @@ const sidebars = {
       },
       "items": [
         'discovery/api/cache',
+        'discovery/api/clipboard',
         'discovery/api/fetch',
         'discovery/api/near',
         'discovery/api/primitives',
