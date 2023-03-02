@@ -6,7 +6,7 @@ sidebar_label: Primitives
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Near Social VM provides a set of custom APIs that can be used by the widgets.
+Near Social VM provides a set of custom APIs that can be used by the components.
 
 Standard objects:
 - `JSON` - the JSON API.

@@ -32,4 +32,4 @@ return (
 );
 ```
 
-If you follow the link above and render this component you will see the button provided by the widget and an example of how to retrieve and display the image that you have uploaded.
+If you follow the link above and render this component you will see the button provided by the component and an example of how to retrieve and display the image that you have uploaded.

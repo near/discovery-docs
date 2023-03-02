@@ -10,7 +10,7 @@ The VM implements caching layer for most network requests. You can leverage it m
 
 ## useCache
 
-The method acts like a hook that takes a promise through a generator function, fetches the data and caches it. The cache is global for the VM, but it's identified by for given widget (by src) for a given `dataKey`.
+The method acts like a hook that takes a promise through a generator function, fetches the data and caches it. The cache is global for the VM, but it's identified by for given component (by src) for a given `dataKey`.
 It can be used to easily use and cache data from async data sources.
 
 **Returns** `null` if the cache is cold and data is fetching, or the previous cached value while the data is being fetched an d, or the new data if the new promise data is different from the old data.
@@ -22,7 +22,7 @@ The data is being cached and compared as JSON serialized objects.
  | param      |  required     | type               | description                                                           |
  |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
  | `promiseGenerator`      |  **required** | object   | a function that returns a promise, which generates data.  |
- | `dataKey`      |  **required** | object   | the unique name (within the current widget) to identify the data.  |
+ | `dataKey`      |  **required** | object   | the unique name (within the current component) to identify the data.  |
  | `options`      |  _optional_ | object   | optional argument:<br/>- `subscribe` _(optional)_: if `true`, the data refreshes periodically by invalidating cache.  |
 
 :::info

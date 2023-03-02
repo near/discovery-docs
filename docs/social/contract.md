@@ -104,7 +104,7 @@ pub fn keys(self, keys: Vec<String>) -> Value;
 
 Returns the aggregated JSON object.
 
-##### Getting a list of widgets of accounts `root.near`
+##### Getting a list of components of accounts `root.near`
 
 ```bash
 env NEAR_ENV=mainnet near view social.near keys '{"keys":["root.near/widget/*"]}'
@@ -122,7 +122,7 @@ env NEAR_ENV=mainnet near view social.near keys '{"keys":["root.near/widget/*"]}
 }
 ```
 
-##### Getting a list of accounts that have widgets
+##### Getting a list of accounts that have components
 
 ```bash
 env NEAR_ENV=mainnet near view social.near keys '{"keys":["*/widget"]}'
