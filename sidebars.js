@@ -16,7 +16,7 @@ const sidebars = {
     'discovery/home',
     {
       "type": "category",
-      "label": "Built-In Components",
+      "label": "Built-in Components",
       "link": {
         "type": "doc",
         "id": "discovery/components/home"

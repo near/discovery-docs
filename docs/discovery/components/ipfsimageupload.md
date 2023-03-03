@@ -13,7 +13,7 @@ The `IpfsImageUpload` is a built-in component that enables users to directly upl
 <WidgetEditor id='1' height="200px">
 
 ```javascript
-initState({
+State.init({
   img: null,
 });
 

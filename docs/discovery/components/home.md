@@ -1,6 +1,6 @@
 ---
 id: home
-title: Built-In Components
+title: Built-in Components
 ---
 
 In Discovery, you build small apps known as `Components`, that focus on solving a specific problem. Then, you compose these `Components` to achieve a full-working frontend.
@@ -13,7 +13,7 @@ To simplify development, Discovery provides a set of built-in components that  y
 
 ---
 
-### Non-Exhaustive List of Built-In Components 
+### Non-Exhaustive List of Built-in Components 
 
 - **[Widget](./widget.md)**: The minimum unit of a frontend.
 - **[Markdown](./markdown.md)**: Renders markdown text.
