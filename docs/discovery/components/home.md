@@ -1,19 +1,19 @@
 ---
 id: home
-title: Components
+title: Built-In Components
 ---
 
-In Discovery, you build apps (named Components) by composing small applications known as `Widgets`.
+In Discovery, you build small apps known as `Components`, that focus on solving a specific problem. Then, you compose these `Components` to achieve a full-working frontend.
+
+To simplify development, Discovery provides a set of built-in components that  you can readily use to build your decentralized frontend.
+
 
 ![widgets](@site/static/docs/widgets.jpeg)
-*Decomposing the [near.social](https://near.social) component into its widgets*
+*Decomposing the [near.social](https://near.social) application into its Components*
 
 ---
 
-## Predefined Components
-Discovery readily provides a set of components so you can readily start building your application.
-
-### Non-Exhaustive List of Predefined Components 
+### Non-Exhaustive List of Built-In Components 
 
 - **[Widget](./widget.md)**: The minimum unit of a frontend.
 - **[Markdown](./markdown.md)**: Renders markdown text.
