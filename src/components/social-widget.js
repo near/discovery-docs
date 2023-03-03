@@ -38,7 +38,7 @@ export function WidgetEditor({ children, id=1, height="160px", properties  }) {
                 scrollBars: false,
               }}
               language={"javascript"}
-              onChange={(newValue, event) => { document.getElementById(`ifm${id}`).src = `${uri}&code=${newValue}` }}
+              onChange={(newValue, event) => { document.getElementById(`ifm${id}`).src = `${uri}&code=${encodeURIComponent(newValue)}` }}
             />
           </div>
           <em> You can edit the code! </em>
@@ -46,7 +46,7 @@ export function WidgetEditor({ children, id=1, height="160px", properties  }) {
           <div class="code_iframe">
             <h4>Preview</h4>
             <hr class="preview-border" />
-            <iframe id={`ifm${id}`} src={`${uri}&code=${code}`} style={{height}}></iframe>
+            <iframe id={`ifm${id}`} src={`${uri}&code=${encodeURIComponent(code)}`} style={{height}}></iframe>
           </div>
         </>
 

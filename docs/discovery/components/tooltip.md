@@ -4,19 +4,23 @@ title: ToolTip Component
 sidebar_label: ToolTip
 ---
 
-## Description
+import {WidgetEditor} from "@site/src/components/social-widget"
 
 This special component displays a message once the mouse hovers over a particular DOM item. This component was imported into NEAR Social from `React-Bootstrap` and more info can be [found here](https://react-bootstrap.netlify.app/components/overlays/#tooltips).
 
-## Example
+<hr class="subsection" />
+
+### Example
 
 The code has been adopted and modified from the `react-bootstrap` documentation website. The snippet below demonstrates how to implement the message over a button and how to reposition it.
+
+<WidgetEditor id='1' height="120px">
 
 ```jsx
 return (
   <>
     {["top", "right", "bottom", "left"].map((placement) => (
-      <div style={{ padding: "10px" }}>
+      <div style={{ margin: "2.5rem 1rem", float: "left" }}>
         <OverlayTrigger
           key={placement}
           placement={placement}
@@ -32,9 +36,6 @@ return (
     ))}
   </>
 );
-
 ```
 
-:::tip
-You can run and try out this code directly in `near.social` by following [this link](https://near.social/#/dorgon108.near/widget/ToolTipExample).
-:::
+</WidgetEditor>

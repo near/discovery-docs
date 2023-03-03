@@ -4,7 +4,15 @@ title: Markdown Viewer
 sidebar_label: Markdown
 ---
 
+import {WidgetEditor} from "@site/src/components/social-widget"
+
 `Markdown` is a built-in component that enables to render Markdown. To use this feature, simply use the `Markdown` component:
+
+<hr class="subsection" />
+
+### Example
+
+<WidgetEditor id='1' height="200px">
 
 ```ts
 const text = `
@@ -14,21 +22,14 @@ const text = `
 
 return (
   <>
-    <h3> Adding Markdown </h3>
-    <p> Widgets can have markdown code </p>
-    <hr />
-    <div class="container border border-info pt-3">
+    <div class="container border border-info pt-3 min-vw-100 text-center">
       <Markdown text={text} />
     </div>
   </>
 );
 ```
 
-<hr class="subsection" />
-
-#### Resulting Widget
-![img](@site/static/docs/widget-markdown.png)
-
+</WidgetEditor>
 
 ---
 

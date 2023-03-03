@@ -6,7 +6,7 @@ import {WidgetEditor} from "@site/src/components/social-widget"
 
 The predefined component `Widget` allows you to include an existing component into your code, thus enabling to create complex applications by composing components.
 
-<WidgetEditor id='2' height="220px">
+<WidgetEditor id='1' height="220px">
 
 ```ts
 const user = "gagdiez.near";
