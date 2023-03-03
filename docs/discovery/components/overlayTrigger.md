@@ -6,8 +6,6 @@ sidebar_label: OverlayTrigger
 
 import {WidgetEditor} from "@site/src/components/social-widget"
 
-# OverlayTrigger
-
 The `OverlayTrigger` is used to display a message or icon when the mouse is over a DOM element. Common use cases could be like a popover or a tooltip.
 
 <hr class="subsection" />
