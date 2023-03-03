@@ -93,7 +93,7 @@ return (
 
 To compose components you will use the [Predefined `Widget` component](./components/widget.md). For this, you will only need the NEAR username of who created the component, and the component's name.
 
-<WidgetEditor id='2' height="200px">
+<WidgetEditor id='4' height="200px">
 
 ```ts
 const user = "gagdiez.near";
