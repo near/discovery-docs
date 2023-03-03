@@ -4,11 +4,18 @@ title: OverlayTrigger
 sidebar_label: OverlayTrigger
 ---
 
+import {WidgetEditor} from "@site/src/components/social-widget"
+
 # OverlayTrigger
 
-The `OverlayTrigger` is used to display a typically a message or icon when the mouse is over a DOM element. Common use cases could be like a popover or a tooltip.
+The `OverlayTrigger` is used to display a message or icon when the mouse is over a DOM element. Common use cases could be like a popover or a tooltip.
 
-This is an integrated special component in the NEAR VM. Here is an example (https://near.social/#/dorgon108.near/widget/OverlayTest) derived from `mob.near's` example.
+<hr class="subsection" />
+
+### Example
+
+<WidgetEditor id='1' height="200px">
+
 
 ```javascript
 State.init({
@@ -53,7 +60,8 @@ return (
 );
 ```
 
-This will simply display a popup message once the user's mouse is over the `<div>` in the `DOM`.
+</WidgetEditor>
+
 
 The OverlayTrigger component has several props that allow you to customize its behavior:
 
